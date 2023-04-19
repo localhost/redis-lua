@@ -1126,6 +1126,9 @@ redis.commands = {
         response = hscan_response,
     }),
 
+    -- commands operating on streams
+    xadd             = command('XADD'),         -- >= 5.0
+
     -- connection related commands
     ping             = command('PING', {
         response = function(response) return response == 'PONG' end
